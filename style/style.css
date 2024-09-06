@@ -1,0 +1,762 @@
+@font-face {
+    font-family: 'OpenSans';
+    src: url('../fonts/OpenSans-Bold.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'OpenSans';
+    src: url('../fonts/OpenSans-Semibold.woff2') format('woff2');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+@font-face {
+    font-family: 'OpenSans';
+    src: url('../fonts/OpenSans-Medium.woff2') format('woff2');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'OpenSans';
+    src: url('../fonts/OpenSans-Regular.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+body {
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+
+    font-family: 'OpenSans', sans-serif;
+    color: var(--prinary-color);
+    background-color: var(--white);
+
+    overflow-x: hidden;
+
+}
+
+.reovax {
+    max-width: 1920px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.reovax__container,
+.header__container {
+    max-width: 1296px;
+    width: 100%;
+}
+
+
+
+.reovax__header {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.header__top {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 42px;
+    padding: 16px 0 17px;
+}
+
+.header__inner {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.header__logo {
+    max-width: 196px;
+    width: 100%;
+    max-height: 58px;
+    height: 100%;
+}
+
+.header__logo image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.header__time {
+    font-family: var(--font-family);
+    font-size: 12px;
+    line-height: 16px;
+    color: var(--primary-color);
+}
+
+.header__search-container {
+    position: relative;
+    max-width: 215px;
+    width: 100%;
+    margin-right: auto;
+}
+
+.header__search-input {
+    cursor: pointer;
+    width: 100%;
+    border: none;
+    background-color: var(--sugar-milk);
+    padding: 12px 28px 12px 64px;
+    border-radius: 100px;
+
+    font-family: var(--font-family);
+    color: var(--willpower-orange);
+    font-size: 16px;
+    line-height: 22px;
+    font-weight: var(--semiBold);
+
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    outline: none;
+}
+
+.header__search-input:hover {
+    color: rgba(249, 87, 7, 0.8);
+}
+
+.header__search-container svg {
+    position: absolute;
+    top: 11px;
+    left: 28px;
+    width: 24px;
+    height: 24px;
+    stroke: var(--willpower-orange);
+}
+
+.header__search-container:hover svg {
+    stroke: rgba(249, 87, 7, 0.8);
+}
+
+.header__search-input::placeholder {
+    color: var(--willpower-orange);
+}
+
+.header__search-input:hover::placeholder {
+    color: rgba(249, 87, 7, 0.8);
+}
+
+.header__calc {
+    cursor: pointer;
+    font-family: var(--font-family);
+    font-size: 16px;
+    line-height: 22px;
+    font-weight: var(--semiBold);
+    color: var(--green);
+
+    background: transparent;
+    border: none;
+    text-decoration: underline;
+}
+
+.header__social-networks {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    margin-left: auto;
+}
+
+.header__social-item {
+    width: 30px;
+    height: 30px;
+}
+
+.header__social-item a svg {
+    width: 100%;
+    height: 100%;
+}
+
+.header__list-contacts {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.header__contact a {
+    font-family: var(--font-family);
+    font-size: 16px;
+    line-height: 22px;
+    color: var(--primary-color);
+    font-weight: var(--semiBold);
+    text-decoration: none;
+    text-wrap: nowrap;
+}
+
+.header__contact a[href^="mailto:"] {
+    font-weight: var(--regular);
+}
+
+.header__btn-call {
+    cursor: pointer;
+    font-family: var(--font-family);
+    font-size: 16px;
+    line-height: 22px;
+    font-weight: var(--semiBold);
+
+}
+
+.button {
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 12px 32px;
+    background: transparent;
+    border: 1px solid var(--willpower-orange);
+    border-radius: 100px;
+    text-wrap: nowrap;
+    text-decoration: none;
+
+    font-family: var(--font-family);
+
+    font-size: 16px;
+    line-height: 22px;
+
+    color: var(--willpower-orange);
+}
+
+.button:hover {
+    border-color: rgba(249, 87, 7, 0.8);
+    color: rgba(249, 87, 7, 0.8);
+}
+
+.button:disabled {
+    border-color: rgba(249, 87, 7, 0.5);
+    color: rgba(249, 87, 7, 0.5);
+}
+
+.button-img {
+    gap: 10px;
+    height: max-content;
+    min-width: 215px;
+    justify-content: space-between;
+    padding: 13px 32px;
+}
+
+.button-img span {
+    font-family: var(--font-family);
+    font-size: 16px;
+    line-height: 22px;
+    color: var(--willpower-orange);
+}
+
+.button-img svg {
+    width: 20px;
+    height: 20px;
+    object-fit: cover;
+    stroke: var(--willpower-orange);
+}
+
+.button-img:hover svg {
+    stroke: rgba(249, 87, 7, 0.8);
+}
+
+.button-img:disabled svg {
+    stroke: rgba(249, 87, 7, 0.5);
+}
+
+.header__line {
+    width: 100%;
+    background-color: var(--unicorn-silver);
+    height: 1px;
+    border: none;
+}
+
+.header__nav {
+    width: 100%;
+    padding: 22px 0;
+}
+
+.header__nav-list {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.header__nav-item a {
+    position: relative;
+    font-family: var(--font-family);
+    font-size: 16px;
+    line-height: 22px;
+    color: var(--shady-character);
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.header__nav-item a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -22px;
+    height: 2px;
+    background-color: var(--willpower-orange);
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
+
+.header__nav-item a:hover::after {
+    transform: scaleX(1);
+}
+
+.header__nav-item a:hover {
+    color: var(--willpower-orange);
+}
+
+/* main */
+
+.reovax__hero {
+    width: 100%;
+    background-color: var(--lighthouse);
+    display: flex;
+    justify-content: center;
+    background-image: url('../img/main-bg.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: right;
+}
+
+.reovax__hero-inner {
+    display: flex;
+    gap: 62px;
+}
+
+.reovax__hero-info {
+    max-width: 515px;
+    width: 100%;
+    padding: 100px 0 120px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    align-items: flex-start;
+    gap: 52px;
+}
+
+.reovax__main-title {
+    font-family: var(--font-family);
+    font-size: 48px;
+    line-height: 65px;
+    font-weight: var(--semiBold);
+    color: var(--primary-color);
+}
+
+.reovax__main-title span {
+    color: var(--green);
+}
+
+.reovax__main-list {
+    max-width: 420px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.reovax__request {
+    margin-top: 16px;
+    max-width: 200px;
+    width: 100%;
+}
+
+.button-painted {
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 12px 32px;
+    background: var(--willpower-orange);
+    border: 1px solid var(--willpower-orange);
+    border-radius: 100px;
+    text-wrap: nowrap;
+    text-decoration: none;
+    font-size: 16px;
+    line-height: 22px;
+    font-weight: var(--semiBold);
+
+    color: var(--white);
+    height: 46px;
+}
+
+.button-painted:hover {
+    background-color: rgba(249, 87, 7, 0.8);
+    border-color: rgba(249, 87, 7, 0.8);
+}
+
+.button-painted:disabled {
+    background-color: rgba(249, 87, 7, 0.5);
+    border-color: rgba(249, 87, 7, 0.5);
+}
+
+.reovax__btn-video {
+    cursor: pointer;
+    height: max-content;
+    background: transparent;
+    border: none;
+    width: 200px;
+    height: 200px;
+
+    margin-top: 52px;
+}
+
+/* section */
+
+.reovax__section {
+    display: flex;
+    flex-direction: column;
+    gap: 100px;
+    padding: 62px 0 20px;
+}
+
+.reovax__features {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 24px;
+}
+
+.reovax__feature-item {
+    min-width: 416px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+
+    padding: 20px 30px;
+    border: 1px solid var(--unicorn-silver);
+    border-radius: 12px;
+}
+
+.reovax__feature-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.reovax__feature-icon {
+    width: 52px;
+    height: 52px;
+}
+
+.reovax__feature-title {
+    font-family: var(--font-family);
+    font-size: 20px;
+    line-height: 28px;
+    font-weight: var(--semiBold);
+    color: var(--primary-color);
+}
+
+.reovax__feature-description {
+    max-width: 340px;
+    width: 100%;
+    font-family: var(--font-family);
+    font-size: 16px;
+    line-height: 22px;
+    color: var(--primary-color);
+}
+
+.reovax__service {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 44px 0 40px;
+    border: 2px solid var(--willpower-orange);
+    border-left: none;
+    border-right: none;
+}
+
+.reovax__service-title,
+.reovax__price-title {
+    max-width: 300px;
+    width: 100%;
+    font-family: var(--font-family);
+    font-size: 42px;
+    line-height: 58px;
+    font-weight: var(--semiBold);
+    color: var(--primary-color);
+}
+
+.reovax__service-content {
+    max-width: 745px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+.reovax__service-paragraph {
+    font-family: var(--font-family);
+    font-size: 16px;
+    line-height: 22px;
+    color: var(--primary-color);
+}
+
+/* metals */
+
+.reovax__metals {
+    display: flex;
+    /* justify-content: space-between; */
+    gap: 44px;
+}
+
+.reovax__metals-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-width: 396px;
+    width: 100%;
+}
+
+.reovax__metals-item {
+    width: 100%;
+    display: flex;
+    border-radius: 12px;
+    background-color: var(--lighthouse);
+}
+
+.reovax__metals-item_title {
+    background-color: var(--green);
+    padding: 22px 32px;
+    margin-bottom: 10px;
+}
+
+.reovax__metals-item_title a {
+    font-family: var(--font-family);
+    font-size: 20px;
+    line-height: 28px;
+    font-weight: var(--semiBold);
+    color: var(--white);
+    text-decoration: none;
+}
+
+.reovax__metals-link {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+.reovax__metals-image-container {
+    max-width: 72px;
+    width: 100%;
+    max-height: 72px;
+    height: 100%;
+}
+
+.reovax__metals-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.reovax__metals-info {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+    padding: 24px 22px 24px 0;
+}
+
+.reovax__metals-name {
+    font-family: var(--font-family);
+    font-size: 16px;
+    line-height: 22px;
+    color: var(--shady-character);
+}
+
+.reovax__metals-icon {
+    stroke: var(--green);
+}
+
+.reovax__metals-item:hover {
+    background-color: var(--green);
+}
+
+.reovax__metals-item:hover .reovax__metals-name {
+    color: var(--white);
+}
+
+.reovax__metals-item:hover .reovax__metals-icon {
+    stroke: var(--white);
+}
+
+/* price */
+
+.reovax__price {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+.reovax__price-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+}
+
+.reovax__wrap-title-price {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.reovax__price-title {
+    max-width: 100%;
+}
+
+.reovax__price-text {
+    font-family: var(--font-family);
+    font-size: 20px;
+    line-height: 28px;
+    color: var(--shady-character);
+}
+
+.reovax__wrap-links {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.reovax__btn-dimanic {
+    height: 46px;
+}
+
+/* table */
+
+.reovax__table {
+    width: 100%;
+    border-collapse: separate; 
+    overflow: hidden;
+    border-spacing: 0; 
+    border-radius: 12px;
+    border: 1px solid var(--unicorn-silver);
+    margin-bottom: 17px;
+}
+
+.reovax__table-row--header {
+    background-color: var(--lighthouse);
+
+}
+
+.reovax__table-row--header .reovax__table-header:first-child {
+    border-bottom-left-radius: 12px;
+  }
+  
+  .reovax__table-row--header .reovax__table-header:last-child {
+    border-bottom-right-radius: 12px;
+  }
+
+  .reovax__table-header {
+    font-family: var(--font-family);
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: var(--semiBold);
+    color: var(--dugong);
+    text-align: center;
+  }
+
+  .reovax__table-header:first-child {
+    text-align: left;
+  }
+
+  .reovax__table-header:last-child {
+    text-align: end;
+  }
+
+.reovax__table-row {
+    position: relative;
+    cursor: pointer;
+    border-collapse: separate; 
+    border-spacing: 0; 
+}
+
+.reovax__table-row:not(:last-child)::after {
+    content: '';
+    display: block;
+    position: absolute;
+    left: 32px;
+    right: 32px; 
+    bottom: 0;
+    height: 1px; 
+    background-color: var(--unicorn-silver);
+  }
+
+.reovax__table-header,
+.reovax__table-data {
+    padding: 24px 32px;
+}
+
+.reovax__table-data {
+    text-align: center;
+    font-family: var(--font-family);
+    font-size: 16px;
+    line-height: 22px;
+    font-weight: var(--regular);
+    color: var(--primary-color);
+    padding: 20px 32px 21px;
+
+}
+
+.reovax__table-data:first-child {
+    text-align: left;
+}
+
+.reovax__table-data a {
+    font-family: var(--font-family);
+    font-size: 16px;
+    line-height: 22px;
+    font-weight: var(--regular);
+    color: var(--green);
+}
+
+.reovax__table-row:hover {
+    background-color: var(--lighthouse);
+}
+
+.reovax__table-row:hover .reovax__table-data a {
+    text-decoration: underline;
+}

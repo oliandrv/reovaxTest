@@ -1,0 +1,20 @@
+:root {
+
+    --font-family: 'OpenSans', sans-serif;
+
+    --primary-color: #1F1F1F;
+    --white: #FFFFFF;
+    --sugar-milk: #FFF7F3;
+    --willpower-orange: #F95707;
+    --green: #105720;
+    --unicorn-silver: #E8E8E8;
+    --shady-character: #4C4C4C;
+    --lighthouse: #F3F7F4;
+    --dugong: #707070;
+
+    --regular: 400;
+    --medium: 500;
+    --semiBold: 600;
+    --bold: 700;
+
+}
